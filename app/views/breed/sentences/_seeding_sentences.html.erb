@@ -1,0 +1,8 @@
+<% seeding_sentences.each do |seeding_sentence| %>
+  <%= form_with url: search_breed_index_path, id: 'js-seeding-sentence-button-to-flower' do |f| %>
+    <%= f.submit seeding_sentence.sentence, class: 'btn btn-primary' %>
+    <%= f.hidden_field :sentence_id, :value => seeding_sentence.sentence_id %>
+  <% end %>
+  <br>
+  <br>
+<% end %>

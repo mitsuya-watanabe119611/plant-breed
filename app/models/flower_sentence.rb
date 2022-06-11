@@ -1,0 +1,2 @@
+class FlowerSentence < Taxonomy
+end

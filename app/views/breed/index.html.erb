@@ -1,0 +1,10 @@
+<h1>育成画面</h1>
+<% if @user.seed_sen_id.nil? && @user.seeding_sen_id.nil? && @user.flower_sen_id.nil? %>
+  <%= render 'breed/sentences/seed_sentences', seed_sentences: @seed_sentences %>
+<% elsif @user.seeding_sen_id.nil? && @user.flower_sen_id.nil? %>
+  <%= render 'breed/sentences/seeding_sentences', seeding_sentences: @seeding_sentences %>
+<% elsif @user.flower_sen_id.nil? %>
+  <%= render 'breed/sentences/flower_sentences', flower_sentences: @flower_sentences %>
+<% elsif !@user.seed_sen_id.nil? && !@user.seeding_sen_id.nil? && !@user.flower_sen_id.nil? %>
+  <%= render 'breed/plant', plant: @plant %>
+<% end %>

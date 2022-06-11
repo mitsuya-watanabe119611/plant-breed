@@ -1,0 +1,2 @@
+class SeedingSentence < Taxonomy
+end
